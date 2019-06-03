@@ -30,4 +30,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+// UPDATE ================================ UPDATE ======================= UPDATE ======================== UPDATE
+router.put("/:id", async (req, res) => {
+  try {
+    const hub = await Projects.update(req.params.id, req.body);
+    if (hub) {
+      res.status(200).json(hub);
+    } else {
+      res.status(404).json({ message: "The project could not be found." });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Error updating the project." });
+  }
+});
+
 module.exports = router;
