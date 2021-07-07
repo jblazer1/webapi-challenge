@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1. it is a light unopinionated framework that sits on top of Node.js
+
+2. It is used to build RESTful web services that work with JSON
+
 - [ ] Describe Middleware?
+
+Middleware is functions that get the request and response objects and can either return the response or call the next middleware. Middleware can change the request or response but doesn't have to.
 
 - [ ] Describe a Resource?
 
+A resource is where the information is coming from
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A status code 200 and/or a message that states the request was successful
+
 - [ ] How can we partition our application into sub-applications?
+
+By putting the routes for each resource in it's own file
 
 ## Project Setup
 
